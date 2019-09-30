@@ -6,7 +6,7 @@ pipeline{
             
             steps{
                 sh "mkdir -p output"
-                writeFile file : "output/somefile", text: "Development"
+                writeFile file : "output/somefile", text: "Production"
                 stash name: 'first-stash', includes: 'output/*' 
                 echo "Esto es una prueba"
             }
